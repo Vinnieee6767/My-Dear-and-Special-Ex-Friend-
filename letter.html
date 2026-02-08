@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You 🤍</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="textCont"></div>
+
+    <div class="song" onclick="togglePlay()">
+      <div class="title">tap me 🎧</div>
+      <div id="pause">🔊</div>
+    </div>
+  </div>
+
+  <audio class="audio" src="song.mp3" loop></audio>
+
+  <script>
+    const audio = document.querySelector(".audio");
+    const pause = document.getElementById("pause");
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        pause.innerHTML = "🔇";
+      } else {
+        audio.pause();
+        pause.innerHTML = "🔊";
+      }
+    }
+  </script>
+
+  <script src="untoldcoding.js"></script>
+
+</body>
+</html>
