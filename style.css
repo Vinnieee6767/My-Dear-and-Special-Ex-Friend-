@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'VT323', monospace;
+}
+
+/* LANDING PAGE */
+
+.landing {
+  background: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #eee 1px, transparent 1px),
+    linear-gradient(to bottom, #eee 1px, transparent 1px);
+}
+
+.center {
+  text-align: center;
+  z-index: 5;
+}
+
+.cat {
+  width: 120px;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.center h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.click {
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.corner {
+  width: 80px;
+  position: absolute;
+}
+
+.tl { top: 10px; left: 10px; }
+.bl { bottom: 10px; left: 10px; }
+.br { bottom: 10px; right: 10px; }
+
+/* LETTER PAGE */
+
+.letter {
+  background: black;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  overflow: hidden;
+}
+
+.cat2 {
+  width: 90px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+.textCont {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* FLOATING POUTS */
+
+.pout {
+  position: fixed;
+  width: 60px;
+  opacity: 0.15;
+  animation: float 18s linear infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(110vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+  }
+}
